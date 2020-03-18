@@ -4,6 +4,7 @@ DROP DATABASE IF EXISTS Juego;
 CREATE DATABASE juego;
 -- hacer uso de la base de datos 
 USE juego;
+-- crear la tabla jugador
  CREATE TABLE jugador(
  idJugador INT NOT NULL AUTO_INCREMENT,
  nombre VARCHAR (50) NOT NULL;
@@ -29,4 +30,4 @@ CONSTRAINT campeon_pk PRIMARY KEY (idCampeon));
   ON UPDATE CASCADE,
   CONSTRAINT batalla_campeon FOREIGN KEY(campeonId) REFERENCES campeon (idCampeon)
    ON DELETE CASCADE
-  ON UPDATE CASCADE,);
+  ON UPDATE CASCADE);
